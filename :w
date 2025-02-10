@@ -1,0 +1,27 @@
+use std::error::Error;
+
+use super::{node::Node, tokenizer::{Priority, Token, Tokenizer}};
+
+pub struct ASTBuilder<'a>{
+    tokens: Tokenizer<'a>,   
+    prev: Option<Token>  
+}
+
+
+
+impl<'a> ASTBuilder<'a> {
+    pub fn new(expr:&'a str)->Self{ 
+        ASTBuilder{ tokens: Tokenizer::new(expr),prev:None}    
+    }
+    
+    pub fn parse(&mut self)->Result<Node,Error>{
+
+    }
+}
+impl<'a> ASTBuilder<'a> {
+    fn generate_ast(&mut self,curr_priority:Priority)->Result<Node,Error>{
+         
+    }
+}
+
+
